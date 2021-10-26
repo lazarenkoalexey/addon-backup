@@ -12,7 +12,9 @@ logo: SwissBackup.svg
 globals:
   pass: ${fn.md5([user.uid])}
   env: ${env.name}
-onBeforeInit: scripts/settings.js
+
+settings: 
+  onBeforeInit: scripts/settings.js
      
 targetNodes:
 
