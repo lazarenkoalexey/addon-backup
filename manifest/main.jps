@@ -14,7 +14,7 @@ globals:
   env: ${env.name}
 
 settings: 
-  onBeforeInit: scripts/settings.js
+  onBeforeInit: scripts/settings2.js
      
 targetNodes:
 
