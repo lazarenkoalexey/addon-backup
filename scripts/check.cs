@@ -80,7 +80,7 @@ import org.apache.commons.httpclient.methods.StringRequestEntity;
           post.releaseConnection();
           post2.releaseConnection();
 
-
+          return { result : 0, post: swift01}
           if (status == HttpStatus.SC_CREATED || status2 == HttpStatus.SC_CREATED ) { // 201
             if (status == HttpStatus.SC_CREATED) {
               return { result : 0, post: swift01}
