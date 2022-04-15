@@ -80,6 +80,7 @@ import org.apache.commons.httpclient.methods.StringRequestEntity;
           post.releaseConnection();
           post2.releaseConnection();
 
+api.marketplace.console.WriteLog("test!");
           return { result : 0, post: swift01}
           if (status == HttpStatus.SC_CREATED || status2 == HttpStatus.SC_CREATED ) { // 201
             if (status == HttpStatus.SC_CREATED) {
