@@ -43,14 +43,16 @@ account = "";
 local_date = 0;
 ids.forEach(function(element) {
 
-
+    jelastic.marketplace.console.WriteLog("element ->" + element);
     var FileReadResponse = jelastic.environment.file.Read(element.name, params.session, params.path, params.nodeType, params.nodeGroup, element.id);
 
+    jelastic.marketplace.console.WriteLog("FileReadResponse ->" + FileReadResponse);
     if (FileReadResponse.result != 0) {
         delete nodesName['node'.concat('', element.id + '-').concat('', element.name)];
     } else {
         file = FileReadResponse.body;
         var plan = toNative(new Yaml().load(file));
+        jelastic.marketplace.console.WriteLog("plan ->" + plan);
         if (plan.last_update > local_date || plan.user != account) {
             local_date = plan.last_update;
             account = plan.user;
