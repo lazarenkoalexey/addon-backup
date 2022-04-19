@@ -2,7 +2,7 @@ import org.yaml.snakeyaml.Yaml;
 
 var resp = jelastic.environment.control.GetEnvs(appid, session);
 var listBackups = {};
-var backupTemplate = "c3c375b4-83c6-434c-b8af-8ea6651e246d";
+var backupTemplate = "abcbf36d-910c-4723-821d-f7c770a98c06";
 var nodesArray = [];
 var nodesName = {};
 var ids = [];
