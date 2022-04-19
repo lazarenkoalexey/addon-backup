@@ -17,6 +17,7 @@ for (var i = 0; envInfo = resp.infos[i]; i++) {
         jelastic.marketplace.console.WriteLog("env is started" + envInfo.env.domain)
         for (var j = 0; node = envInfo.nodes[j]; j++) {
             for (var m = 0; add = node.addons[m]; m++) {
+                jelastic.marketplace.console.WriteLog("add.appTemplateId" + add.appTemplateId);
                 if (add.appTemplateId == backupTemplate) {
                     var conteneur = node.adminUrl.replace("https://", "").replace("http://", "").replace(/\..*/, "").replace("docker", "node").replace("vds", "node");
                     nodesArray.push(conteneur);
