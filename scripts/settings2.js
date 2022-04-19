@@ -19,6 +19,7 @@ for (var i = 0; envInfo = resp.infos[i]; i++) {
             for (var m = 0; add = node.addons[m]; m++) {
                 jelastic.marketplace.console.WriteLog("add.appTemplateId" + add.appTemplateId);
                 if (add.appTemplateId == backupTemplate) {
+                    jelastic.marketplace.console.WriteLog("add ->" + add);
                     var conteneur = node.adminUrl.replace("https://", "").replace("http://", "").replace(/\..*/, "").replace("docker", "node").replace("vds", "node");
                     nodesArray.push(conteneur);
                     ids.push({
@@ -30,6 +31,7 @@ for (var i = 0; envInfo = resp.infos[i]; i++) {
         }
     }
 }
+jelastic.marketplace.console.WriteLog("ids ->" + ids);
 var params = {
     session: session,
     path: "/home/plan.json",
